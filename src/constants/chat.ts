@@ -10,14 +10,14 @@ const dateString =
   ('0' + date.getDate()).slice(-2);
 
 // default system message obtained using the following method: https://twitter.com/DeminDimin/status/1619935545144279040
-export const _defaultSystemMessage = `You are ChatGPT, a large language model trained by OpenAI.
+export const _defaultSystemMessage = `ChatGPT多功能机器人.
 Knowledge cutoff: 2021-09
 Current date: ${dateString}`;
 
 export const modelOptions: ModelOptions[] = [
   'gpt-3.5-turbo',
-  'gpt-4',
-  'gpt-4-32k',
+  //'gpt-4',
+  //'gpt-4-32k',
   // 'gpt-3.5-turbo-0301',
   // 'gpt-4-0314',
   // 'gpt-4-32k-0314',
@@ -26,24 +26,24 @@ export const modelOptions: ModelOptions[] = [
 export const defaultModel = 'gpt-3.5-turbo';
 
 export const modelMaxToken = {
-  'gpt-3.5-turbo': 4096,
-  'gpt-3.5-turbo-0301': 4096,
-  'gpt-4': 8192,
-  'gpt-4-0314': 8192,
-  'gpt-4-32k': 32768,
-  'gpt-4-32k-0314': 32768,
+  'gpt-3.5-turbo': 150,
+  //'gpt-3.5-turbo-0301': 4096,
+  //'gpt-4': 8192,
+  //'gpt-4-0314': 8192,
+  //'gpt-4-32k': 32768,
+  //'gpt-4-32k-0314': 32768,
 };
 
 export const modelCost = {
   'gpt-3.5-turbo': { price: 0.002, unit: 1000 },
-  'gpt-3.5-turbo-0301': { price: 0.002, unit: 1000 },
-  'gpt-4': { price: 0.03, unit: 1000 },
-  'gpt-4-0314': { price: 0.03, unit: 1000 },
-  'gpt-4-32k': { price: 0.06, unit: 1000 },
-  'gpt-4-32k-0314': { price: 0.06, unit: 1000 },
+  //'gpt-3.5-turbo-0301': { price: 0.002, unit: 1000 },
+  //'gpt-4': { price: 0.03, unit: 1000 },
+  //'gpt-4-0314': { price: 0.03, unit: 1000 },
+  //'gpt-4-32k': { price: 0.06, unit: 1000 },
+  //'gpt-4-32k-0314': { price: 0.06, unit: 1000 },
 };
 
-export const defaultUserMaxToken = 4000;
+export const defaultUserMaxToken = 150;
 
 export const _defaultChatConfig: ConfigInterface = {
   model: defaultModel,
